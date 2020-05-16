@@ -42,7 +42,7 @@ def jobs():
     return render_template('index.html', jobs=jobs)
 
 
-@app.rout("job/<job_id>")
+@app.route("job/<job_id>")
 def job(job_id):
     job = execute_sql('SELECT job.id, job.title, job.description, job.salary, employer.id '
                 'as employer_id, employer.name as employer_name FROM job '
