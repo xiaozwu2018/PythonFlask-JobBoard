@@ -52,7 +52,7 @@ def job(job_id):
     return render_template("job.html", job=job)
 
 
-@app.route("/employer/<employer_id")
+@app.route("/employer/<employer_id>")
 def employer(employer_id):
     employer = execute_sql('SELECT * FROM employer WHERE id=?', [employer_id], single=True)
 
